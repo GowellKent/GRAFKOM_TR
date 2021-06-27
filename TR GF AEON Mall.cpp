@@ -50,20 +50,7 @@ void init(void)
     glMatrixMode(GL_MODELVIEW);
 }
 
-void tampil(void)
-{
-    if(is_depth){
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    }else{
-        glClear(GL_COLOR_BUFFER_BIT);
-    }
-    
-    glLoadIdentity();
-    gluLookAt(0.0f, 0.0f, 3.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
-    glRotatef(xrot, 1.0f,0.0f, 0.0f);
-    glRotatef(yrot, 0.0f, 1.0f, 0.0f);
-    glTranslatef(xtrans,ytrans,ztrans);
-    glPushMatrix();
+void bangunankanan(){
     glBegin(GL_LINE_LOOP);
         //depan dari kanan
     glPushMatrix();
@@ -104,8 +91,8 @@ void tampil(void)
     glVertex3f(150.0, 150.0, 20.0);
     glVertex3f(150.0, -100.0, 20.0);
     glEnd();
-    
-    //tembok tulisan aeon 
+
+    //tembok tulisan aeon
     glBegin(GL_QUADS);
     glColor3f(0.964, 0.937, 0.945);
     glVertex3f(50.0, -100.0, 40.0);
@@ -127,7 +114,7 @@ void tampil(void)
     glVertex3f(150.1, 180.0, 40.1);
     glVertex3f(150.1, -10.0, 40.1);
     glEnd();
-    
+
     //bagian 1
     glBegin(GL_QUADS);
     glColor3f(0.964, 0.937, 0.945);
@@ -142,7 +129,7 @@ void tampil(void)
     glVertex3f(-220.0, 140.0, 40.0);
     glVertex3f(-150.0, 140.0, 40.0);
     glVertex3f(-150.0, 120.0, 40.0);
-    glEnd(); 
+    glEnd();
  	glBegin(GL_QUADS);
     glColor3f(0.137, 0.082, 0.101);
     glVertex3f(-220.0, -50.0, 40.0);
@@ -220,7 +207,7 @@ void tampil(void)
     glVertex3f(-220.0, -20.0, 40.0);
     glVertex3f(-220.0, -50.0, 40.0);
     glEnd();
-    
+
     //bagian 2
     glBegin(GL_QUADS);
     glColor3f(0.964, 0.937, 0.945);
@@ -284,7 +271,7 @@ void tampil(void)
     glVertex3f(-430.0, 120.0, 40.0);
     glVertex3f(-425.0, 120.0, 40.0);
     glVertex3f(-425.0, 90.0, 40.0);
-    glEnd(); 
+    glEnd();
     glBegin(GL_QUADS);
     glColor3f(0.137, 0.082, 0.101);
     glVertex3f(-430.0, 80.0, 40.0);
@@ -341,8 +328,11 @@ void tampil(void)
     glVertex3f(-430.0, 135.0, 40.0);
     glVertex3f(-430.0, 90.0, 40.0);
     glEnd();
-    
-    //garis garis kaca besar
+
+}
+
+void gariskaca(){
+     //garis garis kaca besar
     	glLineWidth(2);
     	glBegin(GL_LINE_LOOP);
 		glColor3f(0,0,0);
@@ -382,7 +372,7 @@ void tampil(void)
 		glVertex3f(-160.0, 90.0, 40.0);
 		glVertex3f(-160.0, 120.0, 40.0);
 		glEnd();
-		
+
     	glBegin(GL_LINE_LOOP);
 		glColor3f(0,0,0);
 		glVertex3f(-150.0, 30.0, 40.0);
@@ -439,7 +429,7 @@ void tampil(void)
 		glVertex3f(-425.0, 90.0, 40.0);
 		glVertex3f(-350.0, 90.0, 40.0);
 		glEnd();
-		
+
 		glLineWidth(2);
     	glBegin(GL_LINE_LOOP);
 		glColor3f(0,0,0);
@@ -471,7 +461,7 @@ void tampil(void)
 		glVertex3f(-160.0, 30.0, 40.0);
 		glVertex3f(-160.0, 0.0, 40.0);
 		glEnd();
-		
+
 		glLineWidth(2);
     	glBegin(GL_LINE_LOOP);
 		glColor3f(0,0,0);
@@ -503,7 +493,7 @@ void tampil(void)
 		glVertex3f(-160.0, -20.0, 40.0);
 		glVertex3f(-160.0, -40.0, 40.0);
 		glEnd();
-		
+
 		glLineWidth(2);
     	glBegin(GL_LINE_LOOP);
 		glColor3f(0,0,0);
@@ -535,7 +525,7 @@ void tampil(void)
 		glVertex3f(-280.0, 90.0, 40.0);
 		glVertex3f(-280.0, 120.0, 40.0);
 		glEnd();
-		
+
 			glLineWidth(2);
     	glBegin(GL_LINE_LOOP);
 		glColor3f(0,0,0);
@@ -567,7 +557,7 @@ void tampil(void)
 		glVertex3f(-280.0, 50.0, 40.0);
 		glVertex3f(-280.0, 80.0, 40.0);
 		glEnd();
-		
+
 			glLineWidth(2);
     	glBegin(GL_LINE_LOOP);
 		glColor3f(0,0,0);
@@ -599,7 +589,7 @@ void tampil(void)
 		glVertex3f(-280.0, -20.0, 40.0);
 		glVertex3f(-280.0, -40.0, 40.0);
 		glEnd();
-		
+
 		glLineWidth(2);
     	glBegin(GL_LINE_LOOP);
 		glColor3f(0,0,0);
@@ -631,7 +621,7 @@ void tampil(void)
 		glVertex3f(-360.0, 90.0, 40.0);
 		glVertex3f(-360.0, 120.0, 40.0);
 		glEnd();
-				
+
 		glLineWidth(2);
     	glBegin(GL_LINE_LOOP);
 		glColor3f(0,0,0);
@@ -663,7 +653,7 @@ void tampil(void)
 		glVertex3f(-360.0, 50.0, 40.0);
 		glVertex3f(-360.0, 80.0, 40.0);
 		glEnd();
-		
+
 		glLineWidth(2);
     	glBegin(GL_LINE_LOOP);
 		glColor3f(0,0,0);
@@ -695,7 +685,9 @@ void tampil(void)
 		glVertex3f(-360.0, -20.0, 40.0);
 		glVertex3f(-360.0, -40.0, 40.0);
 		glEnd();
+}
 
+void jendelakotak3(){
     //kaca yang kotak 3
     glBegin(GL_QUADS);
     glColor3f(0.886, 0.854, 0.866);
@@ -742,9 +734,19 @@ void tampil(void)
     glVertex3f(-50.0, 120.0, 40.1);
     glVertex3f(-50.0, 100.0, 40.1);
     glEnd();
-    
-    
-    
+}
+
+void tampil(void)
+{
+    if(is_depth){
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    }else{
+        glClear(GL_COLOR_BUFFER_BIT);
+    }
+	
+    bangunankanan();
+    gariskaca();
+    jendelakotak3();
     
     glPopMatrix();
     glutSwapBuffers();
