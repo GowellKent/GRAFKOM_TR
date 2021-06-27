@@ -743,6 +743,13 @@ void tampil(void)
     }else{
         glClear(GL_COLOR_BUFFER_BIT);
     }
+    glLoadIdentity();
+    gluLookAt(0.0f, 0.0f, 3.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+    glRotatef(xrot, 1.0f,0.0f, 0.0f);
+    glRotatef(yrot, 0.0f, 1.0f, 0.0f);
+    glTranslatef(xtrans,ytrans,ztrans);
+    glPushMatrix();
+    glBegin(GL_LINE_LOOP);
 	
     bangunankanan();
     gariskaca();
