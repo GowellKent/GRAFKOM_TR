@@ -1429,6 +1429,88 @@ void knopi(){
     glEnd();
 }
 
+void bangunankiri(){
+
+    glBegin(GL_QUADS);//sisi kanan
+   glColor3f(0.137, 0.082, 0.101);
+    glVertex3f(-1100.0, -100.0, 50.0);
+    glVertex3f(-1100.0, 135.0, 50.0);
+    glVertex3f(-1100.0, 135.0, 400.0);
+    glVertex3f(-1100.0, -100.0, 400.0);
+    glEnd();
+
+    glBegin(GL_QUADS);//jendela sisi kanan
+   glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(-1099.9, -40.0, 225.0);
+    glVertex3f(-1099.9, 50.0, 225.0);
+    glVertex3f(-1099.9, 50.0, 350.0);
+    glVertex3f(-1099.9, -40.0, 350.0);
+    glEnd();
+
+    glBegin(GL_QUADS);//sisi depan
+   glColor3f(0.137, 0.082, 0.101);
+    glVertex3f(-1100.0, -100.0, 400.0);
+    glVertex3f(-1100.0, 135.0, 400.0);
+    glVertex3f(-1500.0, 135.0, 400.0);
+    glVertex3f(-1500.0, -100.0, 400.0);
+    glEnd();
+
+    glBegin(GL_QUADS);//jendela sisi depan
+   glColor3f(0.9, 0.9, 0.9);
+    glVertex3f(-1300.0, -40.0, 400.1);
+    glVertex3f(-1300.0, 50.0, 400.1);
+    glVertex3f(-1475.0, 50.0, 400.1);
+    glVertex3f(-1475.0, -40.0, 400.1);
+    glEnd();
+
+}
+
+void pitatasbangunankiri(){
+    glBegin(GL_QUADS);//sisi kanan
+    glColor3f(0.964, 0.937, 0.945);
+    glVertex3f(-1095.0, 100.0, 50.0);
+    glVertex3f(-1095.0, 135.0, 50.0);
+    glVertex3f(-1095.0, 135.0, 405.0);
+    glVertex3f(-1095.0, 100.0, 405.0);
+    glEnd();
+
+    glBegin(GL_QUADS);//sisi depan
+   glColor3f(0.964, 0.937, 0.945);
+    glVertex3f(-1095.0, 100.0, 405.0);
+    glVertex3f(-1095.0, 135.0, 405.0);
+    glVertex3f(-1500.0, 135.0, 405.0);
+    glVertex3f(-1500.0, 100.0, 405.0);
+    glEnd();
+}
+
+void kanopibkiri(){
+    glBegin(GL_QUADS); //kanpi dpan1
+    glColor3f(0.537, 0.592, 0.603);
+    glVertex3f(-1200.0, -40.0, 400.0);
+    glVertex3f(-1200.0, -43.0, 450.0);
+    glVertex3f(-1390.0, -43.0, 450.0);
+    glVertex3f(-1390.0, -40.0, 400.0);
+    glEnd();
+
+    glBegin(GL_QUADS); //kanpi dpan2
+    glColor3f(0.537, 0.592, 0.603);
+    glVertex3f(-1248.0, -43.0, 450.0);
+    glVertex3f(-1248.0, -46.0, 490.0);
+    glVertex3f(-1342.0, -46.0, 490.0);
+    glVertex3f(-1342.0, -43.0, 450.0);
+    glEnd();
+
+    glBegin(GL_QUADS); //kanpi kanan
+    glColor3f(0.537, 0.592, 0.603);
+    glVertex3f(-1100.0, -43.0, 375.0);
+    glVertex3f(-1100.0, -43.0, 200.0);
+    glVertex3f(-1070.0, -43.0, 200.0);
+    glVertex3f(-1070.0, -43.0, 375.0);
+    glEnd();
+
+}
+
+
 void tampil(void)
 {
     if(is_depth){
@@ -1456,7 +1538,11 @@ void tampil(void)
     bagianatas_pembatasjendela();
     bagian_serong();
     knopi();
-    
+	
+    bangunankiri();
+    pitatasbangunankiri();
+    kanopibkiri();
+	
     glPopMatrix();
     glutSwapBuffers();
 }
