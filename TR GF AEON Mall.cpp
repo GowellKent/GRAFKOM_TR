@@ -736,22 +736,8 @@ void jendelakotak3(){
     glEnd();
 }
 
-void tampil(void)
-{
-    if(is_depth){
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    }else{
-        glClear(GL_COLOR_BUFFER_BIT);
-    }
-    glLoadIdentity();
-    gluLookAt(0.0f, 0.0f, 3.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
-    glRotatef(xrot, 1.0f,0.0f, 0.0f);
-    glRotatef(yrot, 0.0f, 1.0f, 0.0f);
-    glTranslatef(xtrans,ytrans,ztrans);
-    glPushMatrix();
-    glBegin(GL_LINE_LOOP);
-	//bagian tengah
-     glBegin(GL_QUADS);
+void bagian_tengah(){
+    glBegin(GL_QUADS);
     glColor3f(0.964, 0.937, 0.945);
     glVertex3f(-900.0, 120.0, -20.0);
     glVertex3f(-430.0, 120.0, -20.0);
@@ -761,23 +747,14 @@ void tampil(void)
     
     glBegin(GL_QUADS);
     glColor3f(0.964, 0.937, 0.945);
-    glVertex3f(-900.0, 0.0, -20.0);
-    glVertex3f(-430.0, 0.0, -20.0);
+    glVertex3f(-900.0, -50.0, -20.0);
+    glVertex3f(-430.0, -50.0, -20.0);
     glVertex3f(-430.0, 50.0, -20.0);
     glVertex3f(-900.0, 50.0, -20.0);
     glEnd();
-    
-    //kanan bawah jendela
-     glBegin(GL_QUADS);
-    glColor3f(1,1,1);
-    glVertex3f(-530.0, 0.0, -20.0);
-    glVertex3f(-430.0, 0.0, -20.0);
-    glVertex3f(-430.0, 25.0, -20.0);
-    glVertex3f(-530.0, 25.0, -20.0);
-    glEnd();
-    
-    
-    //jendela kiri tengah
+}
+
+void jendelagaris_kiritengah(){
     glBegin(GL_LINE_LOOP);
     glColor3f(0,0,0);
     glVertex3f(-900.0, 50.0, -20.0);
@@ -809,7 +786,10 @@ void tampil(void)
     glVertex3f(-860.0, 120.0, -20.0);
     glEnd();
     
-    //Jendela kanan
+}
+
+void jendelagaris_kanantengah(){
+	//Jendela kanan
     glBegin(GL_LINE_LOOP);
     glColor3f(0,0,0);
     glVertex3f(-530.0, 50.0, -20.0);
@@ -874,8 +854,10 @@ void tampil(void)
     glVertex3f(-440.0, 120.0, -20.0);
     
     glEnd();
-    
-    //jendela hitam tengah
+}
+
+void jendelahitam_tengah(){
+	//jendela hitam tengah
      glBegin(GL_LINE_LOOP);
     glColor3f(0,0,0);
     glVertex3f(-850.0, 50.0, -20.0);
@@ -1140,7 +1122,10 @@ void tampil(void)
     glVertex3f(-530.0, 50.0, 0.0);
     glVertex3f(-530.0, 90.0, 0.0);
     glEnd();
-    
+}
+
+void pembatas_jendela(){
+	 
     //pembatas tengah jendela
      glBegin(GL_LINE_LOOP);
     glColor3f(0,0,0);
@@ -1181,8 +1166,10 @@ void tampil(void)
     glVertex3f(-530.0, 90.0, -20.0);
     glVertex3f(-850.0, 90.0, -20.0);
     glEnd();
-    
-    //garis atas tengah (bagian atas) pembatas jendela
+}
+
+void bagianatas_pembatasjendela(){
+	//garis atas tengah (bagian atas) pembatas jendela
     glLineWidth(2);
     glBegin(GL_LINE_LOOP);
     glColor3f(0,0,0);
@@ -1406,9 +1393,69 @@ void tampil(void)
     glVertex3f(-530.0, 90.0, 0.0);
     glVertex3f(-530.0, 120.0, 0.0);
     glEnd();
+}
+
+void bagian_serong(){
+    glBegin(GL_QUADS);
+    glColor3f(0.811, 0.882, 0.890);
+    glVertex3f(-900.0, -50.0, -20.0);
+    glVertex3f(-900.0, 135.0, -20.0);
+    glVertex3f(-1100.0, 135.0, 50.0);
+    glVertex3f(-1100.0, -50.0, 50.0);
+    glEnd();
+}
+
+void knopi(){
+    glBegin(GL_QUADS);
+    glColor3f(0.537, 0.592, 0.603);
+    glVertex3f(-430.0, -50.0, 40.0);
+    glVertex3f(-430.0, -50.0, 60.0);
+    glVertex3f(50.0, -50.0, 60.0);
+    glVertex3f(50.0, -50.0, 40.0);
+    glEnd();
+    glBegin(GL_QUADS);
+    glColor3f(0.537, 0.592, 0.603);
+    glVertex3f(-480.0, -50.0, -20.0);
+    glVertex3f(-480.0, -50.0, 60.0);
+    glVertex3f(-430.0, -50.0, 60.0);
+    glVertex3f(-430.0, -50.0, -20.0);
+    glEnd();
+        glBegin(GL_QUADS);
+    glColor3f(0.537, 0.592, 0.603);
+    glVertex3f(-900.0, -50.0, -20.0);
+    glVertex3f(-900.0, -50.0, 0.0);
+    glVertex3f(-480.0, -50.0, 0.0);
+    glVertex3f(-480.0, -50.0, -20.0);
+    glEnd();
+}
+
+void tampil(void)
+{
+    if(is_depth){
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    }else{
+        glClear(GL_COLOR_BUFFER_BIT);
+    }
+	
+    glLoadIdentity();
+    gluLookAt(0.0f, 0.0f, 3.0f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+    glRotatef(xrot, 1.0f,0.0f, 0.0f);
+    glRotatef(yrot, 0.0f, 1.0f, 0.0f);
+    glTranslatef(xtrans,ytrans,ztrans);
+    glPushMatrix();
+    glBegin(GL_LINE_LOOP);
+
     bangunankanan();
     gariskaca();
+    bagian_tengah(); 
     jendelakotak3();
+	jendelagaris_kiritengah();  
+    jendelagaris_kanantengah();
+    jendelahitam_tengah();
+    pembatas_jendela();
+    bagianatas_pembatasjendela();
+    bagian_serong();
+    knopi();
     
     glPopMatrix();
     glutSwapBuffers();
@@ -1490,7 +1537,7 @@ void ukuran(int lebar, int tinggi)
     if (tinggi == 0) tinggi = 1;
     glMatrixMode(GL_PROJECTION);
     glLoadIdentity();
-    gluPerspective(100.0, lebar / tinggi, 5.0, 500.0);
+    gluPerspective(150.0, lebar / tinggi, 5.0, 500.0);
     glTranslatef(0.0, -5.0, -150.0);
     glMatrixMode(GL_MODELVIEW);
 }
