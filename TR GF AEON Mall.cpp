@@ -57,38 +57,38 @@ void bangunankanan(){
     glBegin(GL_QUADS);
     glColor3f(0.137, 0.082, 0.101);
     glVertex3f(150.0, -150.0, 20.0);
-    glVertex3f(150.0, 150.0, 20.0);
-    glVertex3f(150.0, 150.0, 0.0);
+    glVertex3f(150.0, 135.0, 20.0);
+    glVertex3f(150.0, 135.0, 0.0);
     glVertex3f(150.0, -150.0, 0.0);
     glEnd();
     glPushMatrix();
     glBegin(GL_QUADS);
     glColor3f(0.964, 0.937, 0.945);
     glVertex3f(150.0, -150.0, 0.0);
-    glVertex3f(150.0, 150.0, 0.0);
-    glVertex3f(150.0, 150.0,  -20.0);
+    glVertex3f(150.0, 135.0, 0.0);
+    glVertex3f(150.0, 135.0,  -20.0);
     glVertex3f(150.0, -150.0, -20.0);
     glEnd();
     glPushMatrix();
     glBegin(GL_QUADS);
     glColor3f(0.137, 0.082, 0.101);
     glVertex3f(150.0, -150.0, -20.0);
-    glVertex3f(150.0, 150.0, -20.0);
-    glVertex3f(150.0, 150.0, -40.0);
+    glVertex3f(150.0, 135.0, -20.0);
+    glVertex3f(150.0, 135.0, -40.0);
     glVertex3f(150.0, -150.0, -40.0);
     glEnd();
     glBegin(GL_QUADS);
     glColor3f(0.964, 0.937, 0.945);
     glVertex3f(150.0, -150.0, -40.0);
-    glVertex3f(150.0, 150.0, -40.0);
-    glVertex3f(150.0, 150.0,  -80.0);
+    glVertex3f(150.0, 135.0, -40.0);
+    glVertex3f(150.0, 135.0,  -80.0);
     glVertex3f(150.0, -150.0, -80.0);
     glEnd();
     glBegin(GL_QUADS);
     glColor3f(0.964, 0.937, 0.945);
     glVertex3f(150.0, -150.0, 40.0);
-    glVertex3f(150.0, 150.0, 40.0);
-    glVertex3f(150.0, 150.0, 20.0);
+    glVertex3f(150.0, 135.0, 40.0);
+    glVertex3f(150.0, 135.0, 20.0);
     glVertex3f(150.0, -150.0, 20.0);
     glEnd();
 
@@ -1415,7 +1415,7 @@ void bagian_serong(){
 
 void bagian_belakang(){
 	    glBegin(GL_QUADS);
-    glColor3f(1,0,0);
+    glColor3f(0.964, 0.937, 0.945);
     glVertex3f(150.0, -150.0, -80.0);
     glVertex3f(150.0, 135.0, -80.0);
     glVertex3f(-1200.0, 135.0, -80.0);
@@ -1641,7 +1641,7 @@ void jendela_kiri(){
     glEnd();
             glBegin(GL_LINE_LOOP);
     glColor3f(0,0,0);
-    glVertex3f(-1600.0, -10.0, 170.0);
+    glVertex3f(-1600.0, -10.0, 160.0);
     glVertex3f(-1600.0, -10.0, 200.0);
     glEnd();
             glBegin(GL_LINE_LOOP);
@@ -1651,7 +1651,7 @@ void jendela_kiri(){
     glEnd();
             glBegin(GL_LINE_LOOP);
     glColor3f(0,0,0);
-    glVertex3f(-1600.0, -40.0, 170.0);
+    glVertex3f(-1600.0, -40.0, 160.0);
     glVertex3f(-1600.0, -40.0, 200.0);
     glEnd();
             glBegin(GL_LINE_LOOP);
