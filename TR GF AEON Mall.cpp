@@ -1839,6 +1839,40 @@ void kanopikiri(){
     glEnd();
 }
 
+void atap(){
+	glBegin(GL_QUADS);
+   	glColor3f(0.905, 0.874, 0.874);
+    glVertex3f(-1100.0, 135.0, 200.1);
+    glVertex3f(-1100.0, 135.0, 70.1);
+    glVertex3f(-1600.0, 135.0, 70.1);
+    glVertex3f(-1600.0, 135.0, 200.1);
+    glEnd();
+    
+    glBegin(GL_QUADS);
+    glColor3f(0.721, 0.717, 0.717);
+    glVertex3f(-1100.0, 135.0, 70.0);
+    glVertex3f(-500.0, 135.0, -80.0);
+    glVertex3f(-1200.0, 135.0, -80.0);
+    glVertex3f(-1600.0, 135.0, 70.0);
+    glEnd();
+    
+    glBegin(GL_QUADS);
+    glColor3f(0.721, 0.717, 0.717);
+    glVertex3f(-430.0, 135.0, 40.0);
+    glVertex3f(-430.0, 135.0, -80.0);
+    glVertex3f(150.0, 135.0, -80.0);
+    glVertex3f(150.0, 135.0, 40.0);
+    glEnd();
+    
+    glBegin(GL_QUADS);
+    glColor3f(0.721, 0.717, 0.717);
+    glVertex3f(-900.0, 135.0, 20.0);
+    glVertex3f(-500.0, 135.0, -80.0);
+    glVertex3f(-430.0, 135.0, -80.0);
+    glVertex3f(-430.0, 135.0, 20.0);
+    glEnd();
+}
+
 void draw_cylinder(GLfloat radius,GLfloat height,GLubyte R,GLubyte G,GLubyte B)
 {
 	GLfloat x = 0.0;
@@ -1950,6 +1984,7 @@ void tampil(void)
     bagian_belakang();
     buletan();
 
+	atap();
     
     glPopMatrix();
     glutSwapBuffers();
