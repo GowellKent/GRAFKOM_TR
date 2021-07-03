@@ -6,6 +6,7 @@
 #else
 #endif
 #include <stdlib.h>
+#define PI 3.1415927
 
 void init(void);
 void tampil(void);
@@ -1838,6 +1839,80 @@ void kanopikiri(){
     glEnd();
 }
 
+void draw_cylinder(GLfloat radius,GLfloat height,GLubyte R,GLubyte G,GLubyte B)
+{
+	GLfloat x = 0.0;
+	GLfloat y = 0.0;
+	GLfloat angle = 0.0;
+	GLfloat angle_stepsize = 0.1;
+
+	/** Draw the tube */
+
+	glBegin(GL_QUAD_STRIP);
+	angle = 0.0;
+	while (angle < 2 * PI) {
+		x = radius * cos(angle);
+		y = radius * sin(angle);
+		glVertex3f(x, y, height);
+		glVertex3f(x, y, 0.0);
+		angle = angle + angle_stepsize;
+	}
+	glVertex3f(radius, 0.0, height);
+	glVertex3f(radius, 0.0, 0.0);
+	glEnd();
+
+	/** Draw the circle on top of cylinder */
+
+	glBegin(GL_POLYGON);
+	angle = 0.0;
+	while (angle < 2 * PI) {
+		x = radius * cos(angle);
+		y = radius * sin(angle);
+		glVertex3f(x, y, height);
+		angle = angle + angle_stepsize;
+	}
+	glVertex3f(radius, 0.0, height);
+	glEnd();
+}
+
+void buletan(){
+    glPushMatrix();//buletan bawah
+    glColor3f(0.537, 0.592, 0.603);
+    glTranslatef(-1035.0, -50.0, 110.0);
+    glRotatef(-90.0, 1.0, 0.0, 0.0);
+    draw_cylinder(60.0, 7.0, 235, 52,52);
+    glPopMatrix();
+    glFlush();
+
+    glPushMatrix();//buletan tengah
+    glColor3f(0.811, 0.882, 0.890);
+    glTranslatef(-1035.0, -50.0, 110.0);
+    glRotatef(-90.0, 1.0, 0.0, 0.0);
+    draw_cylinder(55.0, 50.0, 235, 52,52);
+    glPopMatrix();
+    glFlush();
+
+    glPushMatrix();// buletan atas
+    glColor3f(0.537, 0.592, 0.603);
+    glTranslatef(-1035.0, 0.0, 110.0);
+    glRotatef(-90.0, 1.0, 0.0, 0.0);
+    draw_cylinder(60.0, 7.0, 235, 52,52);
+    glPopMatrix();
+    glFlush();
+
+    /*glPushMatrix();
+    glTranslatef()
+    glBegin(GL_POLYGON);
+    glColor3f(1.0, 0.0, 0.0);
+    glVertex3f(-1000.0, -50.0, 150.0);
+    glVertex3f(-990.0, -50.0, 200.0);
+    glVertex3f(-960.0, -50.0, 190.0);
+    glVertex3f(-950.0, -50.0, 180.0);
+    glVertex3f(-955.0, -50.0, 130.0);
+    glEnd();*/
+
+}
+
 void tampil(void)
 {
     if(is_depth){
@@ -1873,6 +1948,8 @@ void tampil(void)
     kanopikiri();
     
     bagian_belakang();
+    buletan();
+
     
     glPopMatrix();
     glutSwapBuffers();
