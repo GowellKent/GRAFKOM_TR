@@ -787,6 +787,39 @@ void jendelagaris_kiritengah(){
     glVertex3f(-860.0, 120.0, 20.0);
     glEnd();
     
+    //lantai kiri
+   glBegin(GL_QUADS);
+   	glColor3f(0.964, 0.937, 0.945);
+    glVertex3f(-1100.0, -150.0, 200.1);
+    glVertex3f(-1100.0, -150.0, 70.1);
+    glVertex3f(-1600.0, -150.0, 70.1);
+    glVertex3f(-1600.0, -150.0, 200.1);
+    glEnd();
+    
+    glBegin(GL_QUADS);
+    glColor3f(0.964, 0.937, 0.945);
+    glVertex3f(-1100.0, -150.0, 70.0);
+    glVertex3f(-500.0, -150.0, -80.0);
+    glVertex3f(-1200.0, -150.0, -80.0);
+    glVertex3f(-1600.0, -150.0, 70.0);
+    glEnd();
+    
+    glBegin(GL_QUADS);
+    glColor3f(0.964, 0.937, 0.945);
+    glVertex3f(-430.0, -150.0, 40.0);
+    glVertex3f(-430.0, -150.0, -80.0);
+    glVertex3f(150.0, -150.0, -80.0);
+    glVertex3f(150.0, -150.0, 40.0);
+    glEnd();
+    
+    glBegin(GL_QUADS);
+    glColor3f(0.964, 0.937, 0.945);
+    glVertex3f(-900.0, -150.0, 20.0);
+    glVertex3f(-500.0, -150.0, -80.0);
+    glVertex3f(-430.0, -150.0, -80.0);
+    glVertex3f(-430.0, -150.0, 20.0);
+    glEnd();
+    
 }
 
 void jendelagaris_kanantengah(){
@@ -1412,6 +1445,8 @@ void bagian_serong(){
     glVertex3f(-1600.0, 135.0, 70.0);
     glVertex3f(-1600.0, -150.0, 70.0);
     glEnd();
+    
+    
 }
 
 void bagian_belakang(){
@@ -2309,6 +2344,23 @@ void diatas_atap(){
     glVertex3f(-1200.0, 170.0, -30.0);
     glVertex3f(-1000.0, 170.0, 10.0);
     glVertex3f(-1100.0, 170.0, 40.0);
+    glEnd();
+    
+    //Pakiran
+    glBegin(GL_QUADS);
+    glColor3f(0.478, 0.458, 0.458);
+    glVertex3f(-1000.0, -150.0, 60.0);
+    glVertex3f(30.0, -150.0, 60.0);
+    glVertex3f(30.0, -150.0, 400.0);
+    glVertex3f(-1000.0, -150.0, 400.0);
+    glEnd();
+    
+    glBegin(GL_QUADS);
+    glColor3f(0.478, 0.458, 0.458);
+    glVertex3f(-900.0, -150.0, 60.0);
+    glVertex3f(800.0, -150.0, 60.0);
+    glVertex3f(800.0, -150.0, 400.0);
+    glVertex3f(-900.0, -150.0, 400.0);
     glEnd();
 }
 
