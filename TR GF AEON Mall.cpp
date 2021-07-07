@@ -2641,6 +2641,69 @@ void buletan(){
     glVertex3f(-955.0, -50.0, 130.0);
     glEnd();*/
 
+    glPushMatrix(); //kiri bawah
+    glTranslatef( -30.0, 3.0, -5.0);
+    glBegin(GL_POLYGON);
+    glColor3f(0.537, 0.592, 0.603);
+    glVertex3f(-990.0, -50.0, 150.0);//pivot kiri
+    glVertex3f(-1000.0, -50.0, 190.0);//sudut kiri
+     glVertex3f(-990.0, -50.0, 189.0);//tengah kiri
+    glVertex3f(-980.0, -50.0, 188.0);//tengah
+     //glVertex3f(-972.0, -50.0, 187.0);//tengah kanan
+    glVertex3f(-965.0, -50.0, 180.0);//sudut kanan
+    glVertex3f(-975.0, -50.0, 150.0);//pivot kanan
+    glEnd();
+    glPopMatrix();
+    glFlush();
+
+    glPushMatrix();//kiri atas
+    glTranslatef( -30.0, 53.0, -5.0);
+    glBegin(GL_POLYGON);
+    glColor3f(0.537, 0.592, 0.603);
+    glVertex3f(-990.0, -50.0, 150.0);//pivot kiri
+    glVertex3f(-1000.0, -50.0, 190.0);//sudut kiri
+     glVertex3f(-990.0, -50.0, 189.0);//tengah kiri
+    glVertex3f(-980.0, -50.0, 188.0);//tengah
+     //glVertex3f(-972.0, -50.0, 187.0);//tengah kanan
+    glVertex3f(-965.0, -50.0, 180.0);//sudut kanan
+    glVertex3f(-975.0, -50.0, 150.0);//pivot kanan
+    glEnd();
+    glPopMatrix();
+    glFlush();
+
+    glPushMatrix(); //kanan bawah
+    glRotatef(60.0, 0.0, 1.0, 0.0);
+    glTranslatef( 390.0, 3.0, -940.0);
+    glBegin(GL_POLYGON);
+    glColor3f(0.537, 0.592, 0.603);
+    glVertex3f(-990.0, -50.0, 150.0);//pivot kiri
+    glVertex3f(-1000.0, -50.0, 190.0);//sudut kiri
+     glVertex3f(-990.0, -50.0, 189.0);//tengah kiri
+    glVertex3f(-980.0, -50.0, 188.0);//tengah
+     //glVertex3f(-972.0, -50.0, 187.0);//tengah kanan
+    glVertex3f(-965.0, -50.0, 180.0);//sudut kanan
+    glVertex3f(-975.0, -50.0, 150.0);//pivot kanan
+    glEnd();
+    glPopMatrix();
+    glFlush();
+
+    glPushMatrix(); //kanan atas
+    glRotatef(60.0, 0.0, 1.0, 0.0);
+    glTranslatef( 390.0, 53.0, -940.0);
+    glBegin(GL_POLYGON);
+    glColor3f(0.537, 0.592, 0.603);
+    glVertex3f(-990.0, -50.0, 150.0);//pivot kiri
+    glVertex3f(-1000.0, -50.0, 190.0);//sudut kiri
+     glVertex3f(-990.0, -50.0, 189.0);//tengah kiri
+    glVertex3f(-980.0, -50.0, 188.0);//tengah
+     //glVertex3f(-972.0, -50.0, 187.0);//tengah kanan
+    glVertex3f(-965.0, -50.0, 180.0);//sudut kanan
+    glVertex3f(-975.0, -50.0, 150.0);//pivot kanan
+    glEnd();
+    glPopMatrix();
+    glFlush();
+
+
 }
 
 void kursi(){
