@@ -2630,17 +2630,6 @@ void buletan(){
     glPopMatrix();
     glFlush();
 
-    /*glPushMatrix();
-    glTranslatef()
-    glBegin(GL_POLYGON);
-    glColor3f(1.0, 0.0, 0.0);
-    glVertex3f(-1000.0, -50.0, 150.0);
-    glVertex3f(-990.0, -50.0, 200.0);
-    glVertex3f(-960.0, -50.0, 190.0);
-    glVertex3f(-950.0, -50.0, 180.0);
-    glVertex3f(-955.0, -50.0, 130.0);
-    glEnd();*/
-
     glPushMatrix(); //kiri bawah
     glTranslatef( -30.0, 3.0, -5.0);
     glBegin(GL_POLYGON);
@@ -2703,6 +2692,34 @@ void buletan(){
     glPopMatrix();
     glFlush();
 
+    glPushMatrix();//buletan bawah serong
+    glColor3f(0.537, 0.592, 0.603);
+    glTranslatef(-950.0, -50.0, 50.0);
+    glRotatef(-90.0, 1.0, 0.0, 0.0);
+    draw_cylinder(40.0, 1.0, 235, 52,52);
+    glPopMatrix();
+    glFlush();
+    glPushMatrix();//buletan atas serong
+    glColor3f(0.911, 0.982, 0.990);
+    glTranslatef(-950.0, -50.0, 50.0);
+    glRotatef(-90.0, 1.0, 0.0, 0.0);
+    draw_cylinder(30.0, 2.0, 235, 52,52);
+    glPopMatrix();
+    glFlush();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.537, 0.592, 0.603);
+    glVertex3f(-900.0, -50.0, 20.0);
+    glVertex3f(-910.0, -50.0, 60.0);
+    glVertex3f(-950.0, -50.0, 25.0);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.537, 0.592, 0.603);
+    glVertex3f(-1090.0, -50.0, 30.0);
+    glVertex3f(-980.0, -50.0, 70.0);
+    glVertex3f(-950.0, -50.0, 35.0);
+    glEnd();
 
 }
 
